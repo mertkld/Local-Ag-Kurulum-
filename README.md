@@ -24,7 +24,7 @@ Hyper-V Manager’ı açın ve sağ panelde yer alan **Sanal Anahtar Yöneticisi
 - **Yönetim işletim sisteminin bu ağ bağdaştırıcısını paylaşmasına izin ver:**  
   - Eğer WAN üzerinden IP ataması gerçekleşmiyorsa bu seçeneği devre dışı bırakın.
 
-
+---
 
 ### 3. LAN (Özel Ağ) Anahtarı Oluşturma
 
