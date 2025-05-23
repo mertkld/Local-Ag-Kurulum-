@@ -8,9 +8,9 @@ Bu rehber, Hyper-V üzerinde pfSense gibi sanal makineler için gerekli olan WAN
 
 Hyper-V Manager’ı açın ve sağ panelde yer alan **Sanal Anahtar Yöneticisi** seçeneğine tıklayın.
 
----
 
-## 2. WAN (Dış Ağ) Anahtarı Oluşturma
+
+### 2. WAN (Dış Ağ) Anahtarı Oluşturma
 
 1. **Yeni sanal ağ anahtarı** seçeneğine tıklayın.
 2. **Dış (External)** seçeneğini seçin.
@@ -24,9 +24,9 @@ Hyper-V Manager’ı açın ve sağ panelde yer alan **Sanal Anahtar Yöneticisi
 - **Yönetim işletim sisteminin bu ağ bağdaştırıcısını paylaşmasına izin ver:**  
   - Eğer WAN üzerinden IP ataması gerçekleşmiyorsa bu seçeneği devre dışı bırakın.
 
----
 
-## 3. LAN (Özel Ağ) Anahtarı Oluşturma
+
+### 3. LAN (Özel Ağ) Anahtarı Oluşturma
 
 1. **Yeni sanal ağ anahtarı** seçeneğine tıklayın.
 2. **Özel (Private)** seçeneğini seçin.
@@ -37,33 +37,34 @@ Hyper-V Manager’ı açın ve sağ panelde yer alan **Sanal Anahtar Yöneticisi
 - **Ad:** LAN-Switch (İstediğiniz bir ad olabilir)
 - **Bağlantı türü:** Özel ağ (yalnızca sanal makineler arasında iletişim)
 
----
 
-## 4. Sanal Anahtarları Sanal Makineye Bağlama (pfSense Örneği)
+
+### 4. Sanal Anahtarları Sanal Makineye Bağlama (pfSense Örneği)
 
 pfSense kurulu sanal makineye sağ tıklayın, **Ayarlar** bölümüne girin ve aşağıdaki adımları izleyin:
 
-### WAN İçin:
+**WAN İçin:**
 - **Ağ Bağdaştırıcısı > Sanal anahtar:** WAN-Switch
 
-### LAN İçin:
+**LAN İçin:**
 - Yeni bir **ağ bağdaştırıcısı** ekleyin.
 - **Sanal anahtar:** LAN-Switch
 
 ---
 
-## 5. Neden Bu Yapılandırma?
+### 5. Neden Bu Yapılandırma?
 
 - **WAN:** Gerçek ağ ile iletişim için gereklidir (örneğin internet erişimi).
 - **LAN:** İzole bir ağ ortamı sağlar, istemciler bu ağ üzerinden bağlanır.
 - **pfSense:** Bu iki ağ arasında çalışan, yönlendirme ve güvenlik kontrollerini gerçekleştiren ağ geçididir.
 
----
 
-## Notlar
+
+### Notlar
 
 - Her değişiklik sonrası sanal makineyi yeniden başlatmanız gerekebilir.
 - WAN tarafı doğru yapılandırılmazsa pfSense dış dünyaya erişemez.
+
 
 
 ## PfSense Kurulumu
