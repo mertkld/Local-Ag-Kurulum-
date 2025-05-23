@@ -50,7 +50,7 @@ pfSense kurulu sanal makineye sağ tıklayın, **Ayarlar** bölümüne girin ve 
 - Yeni bir **ağ bağdaştırıcısı** ekleyin.
 - **Sanal anahtar:** LAN-Switch
 
----
+
 
 ### 5. Neden Bu Yapılandırma?
 
@@ -65,7 +65,7 @@ pfSense kurulu sanal makineye sağ tıklayın, **Ayarlar** bölümüne girin ve 
 - Her değişiklik sonrası sanal makineyi yeniden başlatmanız gerekebilir.
 - WAN tarafı doğru yapılandırılmazsa pfSense dış dünyaya erişemez.
 
-
+---
 
 ## PfSense Kurulumu
 
