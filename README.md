@@ -155,10 +155,7 @@ Windows Server kurulu sunucuya:
 - **Sağ tık > Ayarlar > Ağ Bağdaştırıcısı > (WAN AĞI)**
 
 Windows Server'ı başlatıp http://192.168.1.1/ adresinden web arayüzüne girinebilir.
-Web arayüzü varsayılan kullanıcı bilgileri:
 
-- Kullanıcı: admin
-- Şifre: pfsense
 
 Yönetim panelin Local IP değiştirme:
 
