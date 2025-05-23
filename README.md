@@ -4,7 +4,7 @@ Bu rehber, Hyper-V üzerinde pfSense gibi sanal makineler için gerekli olan WAN
 
 ---
 
-## 1. Sanal Anahtar Yöneticisine Erişim
+### 1. Sanal Anahtar Yöneticisine Erişim
 
 Hyper-V Manager’ı açın ve sağ panelde yer alan **Sanal Anahtar Yöneticisi** seçeneğine tıklayın.
 
