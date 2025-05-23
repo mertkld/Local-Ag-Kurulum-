@@ -99,36 +99,7 @@ pfSense ile yapılabilecek başlıca işlemler:
 
 ### pfSense Kurulumu Adımları (Genel)
 
-1. ISO ile sanal makineyi başlatın.
-2. Karşınıza gelen pfSense yükleyicisini takip ederek kurulumu gerçekleştirin.
-3. Disk yapılandırmasını onaylayın (Varsayılan ayarlar çoğu zaman yeterlidir).
-4. Sistem yeniden başladıktan sonra ağ arayüzlerini atayın:
-   - WAN → genellikle ilk bağdaştırıcı
-   - LAN → ikinci bağdaştırıcı
-5. Kurulum tamamlandığında LAN arayüzüne atanmış IP ile web arayüzüne erişebilirsiniz (`http://192.168.1.1` gibi).
-
----
-
-### Varsayılan Giriş Bilgileri:
-
-- **Kullanıcı adı:** `admin`
-- **Şifre:** `pfsense`
-
-İlk girişte sizden yeni bir şifre belirlemeniz istenir.
-
----
-
-### Kurulumdan Sonra Yapılabilecekler
-
-- Web arayüzü üzerinden ağ kurallarını yapılandırma
-- WAN IP’si alıp almadığını kontrol etme
-- İç ağa bağlı istemciler için DHCP sunucusunu etkinleştirme
-- Firewall kuralları yazarak dışa açık portları belirleme
-
-
-
-<a href="https://www.pfsense.org/">PfSense İndir</a>
-
+**ISO ile sanal makineyi başlatın.**
 PfSense, ilk açılım
 
 ![resim1](https://github.com/user-attachments/assets/2192c375-dba0-4e54-8127-50750f48f61b)
@@ -155,6 +126,30 @@ Space'e basarak disk'i seçiyoruz.
 
 Kurulumdan sonra yeniden başlatıyoruz.
 Kurulumdan sonra otomatik giriş yapacaktır.
+
+---
+
+### Varsayılan Giriş Bilgileri:
+
+- **Kullanıcı adı:** `admin`
+- **Şifre:** `pfsense`
+
+İlk girişte sizden yeni bir şifre belirlemeniz istenir.
+
+---
+
+### Kurulumdan Sonra Yapılabilecekler
+
+- Web arayüzü üzerinden ağ kurallarını yapılandırma
+- WAN IP’si alıp almadığını kontrol etme
+- İç ağa bağlı istemciler için DHCP sunucusunu etkinleştirme
+- Firewall kuralları yazarak dışa açık portları belirleme
+
+
+
+
+
+
 
 Windows Server kurulu sunucuya:
 - **Sağ tık > Ayarlar > Ağ Bağdaştırıcısı > (WAN AĞI)**
