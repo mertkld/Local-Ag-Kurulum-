@@ -69,7 +69,63 @@ pfSense kurulu sanal makineye sağ tıklayın, **Ayarlar** bölümüne girin ve 
 
 ## PfSense Kurulumu
 
-PfSense, Linux çekirdeğini kullanan açık kaynaklı bir güvenlik duvarı işi görür. Port yönlendirme, vs. İşler içindir.
+**pfSense**, FreeBSD tabanlı açık kaynaklı bir güvenlik duvarı ve yönlendirici (router) çözümüdür. Kurumsal düzeyde ağ güvenliği, trafik yönetimi ve bağlantı kontrolü sağlar. Hyper-V üzerinde sanal bir makineye kurulabilir ve hem WAN hem LAN sanal anahtarlarıyla çalıştırılabilir.
+
+pfSense ile yapılabilecek başlıca işlemler:
+
+- **Güvenlik duvarı kuralları (Firewall Rules):** Gelen ve giden trafiği kontrol etme
+- **Port yönlendirme (Port Forwarding):** Belirli iç IP'lere gelen dış bağlantıları yönlendirme
+- **DHCP sunucusu:** Yerel ağdaki istemcilere otomatik IP dağıtımı
+- **DNS yönlendirme / çözümleme**
+- **VPN sunucusu:** Uzak erişim ve güvenli bağlantılar için OpenVPN gibi çözümler
+- **Trafik şekillendirme (Traffic Shaping):** Ağ bant genişliğini belirli uygulamalara göre önceliklendirme
+- **VLAN desteği:** Fiziksel olarak aynı ağda sanal olarak ayrı ağlar tanımlama
+
+---
+
+### Hyper-V Üzerinde pfSense Kurulumu İçin Ön Hazırlık
+
+1. Daha önce oluşturduğunuz **WAN-Switch** ve **LAN-Switch** sanal anahtarlarının hazır olduğundan emin olun.
+2. [https://www.pfsense.org/download/](https://www.pfsense.org/download/) adresinden pfSense ISO dosyasını indirin.
+3. Hyper-V’de yeni bir sanal makine oluşturun:
+   - Generation: 1
+   - RAM: En az 1 GB
+   - Ağ Bağlantıları:
+     - İlk ağ bağdaştırıcısı → WAN-Switch
+     - İkinci ağ bağdaştırıcısı → LAN-Switch
+   - ISO dosyasını sanal DVD sürücüsüne bağlayın.
+
+---
+
+### pfSense Kurulumu Adımları (Genel)
+
+1. ISO ile sanal makineyi başlatın.
+2. Karşınıza gelen pfSense yükleyicisini takip ederek kurulumu gerçekleştirin.
+3. Disk yapılandırmasını onaylayın (Varsayılan ayarlar çoğu zaman yeterlidir).
+4. Sistem yeniden başladıktan sonra ağ arayüzlerini atayın:
+   - WAN → genellikle ilk bağdaştırıcı
+   - LAN → ikinci bağdaştırıcı
+5. Kurulum tamamlandığında LAN arayüzüne atanmış IP ile web arayüzüne erişebilirsiniz (`http://192.168.1.1` gibi).
+
+---
+
+### Varsayılan Giriş Bilgileri:
+
+- **Kullanıcı adı:** `admin`
+- **Şifre:** `pfsense`
+
+İlk girişte sizden yeni bir şifre belirlemeniz istenir.
+
+---
+
+### Kurulumdan Sonra Yapılabilecekler
+
+- Web arayüzü üzerinden ağ kurallarını yapılandırma
+- WAN IP’si alıp almadığını kontrol etme
+- İç ağa bağlı istemciler için DHCP sunucusunu etkinleştirme
+- Firewall kuralları yazarak dışa açık portları belirleme
+
+
 
 <a href="https://www.pfsense.org/">PfSense İndir</a>
 
